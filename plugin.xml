@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+           id="org.apache.cordova.alertlist"
+      version="0.1.0">
+
+    <name>AlertList</name>
+    <description>Cordova AlertList Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,alertlist</keywords>
+    <repo>https://github.com/juvs/cordova-plugin-alertlist.git</repo>	
+
+	<!-- android -->
+	<platform name="android">
+
+        <js-module src="www/android/AlertList.js" name="AlertList">
+            <clobbers target="AlertList" />
+        </js-module>	
+	
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="AlertList" >
+				<param name="android-package" value="org.apache.cordova.alertlist.AlertList"/>
+			</feature>
+		</config-file>
+
+		<source-file src="src/android/AlertList.java" target-dir="src/org/apache/cordova/alertlist" />
+
+	</platform>
+
+
+</plugin>
